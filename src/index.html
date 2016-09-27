@@ -12,6 +12,18 @@
 <script src="jspm_packages/system.js"></script>
 <script src="jspm.config.js"></script>
 <script>
+    SystemJS.config({
+        "meta": {
+            "*.js": {
+                "babelOptions": {
+                    "stage1": true,
+                    "plugins": [
+                        "babel-plugin-transform-react-jsx"
+                    ]
+                }
+            }
+        }
+    })
     SystemJS.load('app/index.js')
 </script>
 </body>
